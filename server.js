@@ -38,6 +38,6 @@ app.put("/image", (req,res) => {image.handleImage(req,res,db)})
 
 app.put("/imageUrl", (req,res) => {image.handleImageUrl(req,res)})
 
-app.listen(3000, () => {
-    console.log("its working fine!!!");
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`its working fine on ${process.env.PORT}!!!`);
 })
